@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+}
+
+header {
+    display: flex;
+    width: 90%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+}
+
+ .logo, .nav-links, .cart {
+    display: flex;
+ }
+
+.logo-text {
+    align-self: center;
+    font-weight: 400;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.logo {
+    flex: 1;
+}
+
+nav {
+    flex: 2;
+}
+
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #5f5f79;
+    font-size: 18px;
+}
+
+.cart {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.big {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.formulario {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: rgb(221, 221, 221);
+    padding: 25px 30px;
+    border-radius: 5px;
+    animation: drop 1.5s ease;
+}
+
+.container .titulo {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .titulo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: #fff;
+}
+
+.container form .infos {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0 ;
+}
+
+form .infos .input-box {
+    width: calc(100% /2 -20px);
+    margin-bottom: 15px;
+}
+
+.infos .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(163, 163, 163);
+    font-size: 16px;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.infos .input-box .detalhes {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.infos .input-box input:focus,
+.infos .input-box input:valid {
+    border-color: #000;
+}
+
+form .genero-detalhes .genero-titulo {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .genero-detalhes .categoria {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 14px 0;
+}
+
+.genero-detalhes .categoria label {
+    display: flex;
+    align-items: center;
+}
+
+.genero-detalhes .categoria .ponto {
+    height: 18px;
+    width: 18px;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#ponto1:checked ~ .categoria label .um, 
+#ponto2:checked ~ .categoria label .dois,
+#ponto3:checked ~ .categoria label .tres,
+#ponto4:checked ~ .categoria label .quatro {
+
+    border-color: #000;
+    background: #fff;
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+form .botao {
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .botao input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #000;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: #fff;
+}
+
+form .botao input:hover {
+    background: #5f5f79;
+}
+
+
+
+
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .apresentacao {
+        flex-direction: column;
+    }
+
+    .introducao {
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .intro-text h1{
+        font-size: 30px;
+    }
+
+    .intro-text p {
+        font-size: 18px;
+    }
+
+    .clique {
+        padding: 10px 0px 0px 0px;
+    }
+
+    .logo {
+        flex: 0.3;
+    }
+
+    .logo-text {
+        display: none;
+        
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .cart {
+        flex: 0.3;
+    }
+
+    .select {
+        bottom: 5%;
+        right: 50%;
+        width: 50%;
+        transform: translate(50%, 5%);
+    }
+
+    .big {
+        height: 80%;
+        left: 20%;
+        opacity: 0.3;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    form .infos .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    form .genero-detalhes .categoria {
+        width: 100%;
+    }
+
+    .container form .infos {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user-details::-webkit-scrollbar {
+        width: 0;
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img height="40px" src="/projeto-site-webdev/img/logo.png" alt="Logo Saturn">
+            <h4 class="logo-text">Saturn</h4>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="/projeto-site-webdev/home/index.html">Home</a></li>
+                <li><a class="nav-link" href="/projeto-site-webdev/produtos/produtos.html">Produtos</a></li>
+                <li><a class="nav-link" href="/projeto-site-webdev/lojas/lojas.html">Lojas</a></li>
+                <li><a class="nav-link" href="/projeto-site-webdev/cadastro/cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <img src="/projeto-site-webdev/img/cart.svg" alt="Carrinho">
+        </div>  
+    </header>
+    <div class="formulario">
+        <div class="container">
+            <div class="titulo">Cadastro</div>
+            <form action="#"> 
+                <div class="infos">
+                    <div class="input-box">
+                        <span class="detalhes">Nome Completo</span>
+                        <input type="text" placeholder="Insira seu nome" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="detalhes">Usuário</span>
+                        <input type="text" placeholder="Insira seu nome de usuário" required>
+                    </div>
+                        
+                    <div class="input-box">
+                        <span class="detalhes">Email</span>
+                        <input type="email" placeholder="Insira seu email" required>
+                    </div>
+                            
+                    <div class="input-box">
+                        <span class="detalhes">Telefone</span>
+                        <input type="text" placeholder="Insira seu número de telefone" required>
+                    </div>
+                                
+                    <div class="input-box">
+                        <span class="detalhes">Senha</span>
+                        <input type="text" placeholder="Insira sua senha" required>
+                    </div>
+                                    
+                    <div class="input-box">
+                        <span class="detalhes">Confirme sua senha</span>
+                        <input type="text" placeholder="Insira sua senha" required>
+                    </div>
+                </div>
+                <div class="genero-detalhes">
+                    <input type="radio" name="genero" id="ponto1">
+                    <input type="radio" name="genero" id="ponto2">
+                    <input type="radio" name="genero" id="ponto3">
+                    <input type="radio" name="genero" id="ponto4">
+                    <span class="genero-titulo">Gênero</span>
+                    <div class="categoria">
+                        <label for="ponto1">
+                            <span class="ponto um"></span>
+                            <span class="genero">Masculino</span>
+                        </label>
+                        <label for="ponto2">
+                            <span class="ponto dois"></span>
+                            <span class="genero">Feminino</span>
+                        </label>
+                        <label for="ponto3">
+                            <span class="ponto tres"></span>
+                            <span class="genero">Outro</span>
+                        </label>
+                        <label for="ponto4">
+                            <span class="ponto quatro"></span>
+                            <span class="genero">Prefiro não mencionar</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="botao">
+                    <input type="submit" value="Registrar">
+                </div>
+            </form>
+        </div>
+    </div>
+    <img class="big" src="/projeto-site-webdev/img/big-eclipse.svg">
+</body>
+</html>
